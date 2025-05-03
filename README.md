@@ -4,7 +4,7 @@ A full-stack application built with **Next.js (App Router)** and **TypeScript** 
 
 ## 🎬 Demo
 
-![GPU Cost Optimizer & Recommender Demo](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID)
+![GPU Cost Optimizer & Recommender Demo](https://github.com/SargunSinghSethi/SD002/blob/main/demo_video.mp4)
 
 ▶️ Click the image above to watch a demonstration of how the GPU Cost Optimizer & Recommender works
 
