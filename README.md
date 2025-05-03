@@ -2,6 +2,11 @@
 
 A full-stack application built with **Next.js (App Router)** and **TypeScript** that helps users find cost-optimized GPU instances for their AI/ML workloads using AceCloudHosting's real-time pricing API.
 
+## 🎬 Demo
+
+[![GPU Cost Optimizer & Recommender Demo](https://www.youtube.com/watch?v=YOUTUBE_VIDEO_ID)
+
+▶️ Click the image above to watch a demonstration of how the GPU Cost Optimizer & Recommender works
 
 ## 🚀 Features
 
