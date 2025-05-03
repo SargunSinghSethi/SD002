@@ -1,36 +1,131 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GPU Cost Optimizer & Recommender 🧠⚙️
 
-## Getting Started
+A full-stack application built with **Next.js (App Router)** and **TypeScript** that helps users find cost-optimized GPU instances for their AI/ML workloads using AceCloudHosting's real-time pricing API.
 
-First, run the development server:
+
+## 🚀 Features
+
+- **Dynamic GPU Instance Recommendations** based on:
+  - Model type (Vision, NLP, LLM)
+  - Dataset size
+  - Purpose (Training / Inference)
+  - Budget constraints
+  - Preferred region
+- **Real-time Pricing Data** from AceCloudHosting API
+- **Smart Fallback System** with request option if no GPU matches budget
+- **Clean, Responsive UI** built with Tailwind CSS & React Server Components
+
+## 🛠️ Tech Stack
+
+- **Next.js 13+** (App Router)
+- **TypeScript**
+- **Tailwind CSS**
+- **AceCloudHosting Pricing API**
+
+## 📋 Prerequisites
+
+- Node.js 18.x or higher
+- npm or yarn
+
+## 🔧 Installation
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/gpu-recommender.git
+cd gpu-recommender
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+# or
+yarn install
+```
+
+### 3. Run the development server
 
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Navigate to [http://localhost:3000](http://localhost:3000) to use the application.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📁 Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```
+/app
+  /api
+    /recommendation
+      route.ts            # Backend route handling GPU recommendation logic
+  /components
+    /ui
+      button.tsx          # Reusable Button component
+    WorkLoadForm.tsx      # Frontend form for user input
+  layout.tsx
+  page.tsx
+/public
+/styles
+  globals.css
+package.json
+tsconfig.json
+README.md
+```
 
-## Learn More
+## 🧪 Usage Guide
 
-To learn more about Next.js, take a look at the following resources:
+1. Fill in the workload form with your requirements:
+   - Select your model type (Vision, NLP, LLM)
+   - Enter your dataset size
+   - Choose your purpose (Training / Inference)
+   - Set your budget range
+   - Select your preferred region
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+2. Click "Get Recommendations" to receive cost-optimized GPU instance suggestions
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. If no options match your budget, you'll see a request option for custom solutions
 
-## Deploy on Vercel
+## 🌍 API Integration
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This application uses the AceCloudHosting GPU Pricing API to fetch real-time pricing data and make intelligent recommendations based on your specific workload requirements.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🔄 Customization
+
+You can customize the recommendation algorithm by modifying the `/app/api/recommendation/route.ts` file to adjust priority weights for different factors (cost, performance, availability).
+
+## 🚧 Limitations
+
+- This is an MVP version without authentication
+- Edge cases like malformed input or empty API responses are handled gracefully
+- Limited to GPU options available through AceCloudHosting
+
+## 📈 Future Improvements
+
+- User authentication and saved preferences
+- Historical price tracking
+- Performance benchmarks for different workloads
+- Multi-cloud provider comparison
+- Export recommendations as PDF/CSV
+
+## 📄 License
+
+[MIT](LICENSE)
+
+## 👥 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 🙏 Acknowledgements
+
+- [AceCloudHosting](https://www.acecloudhosting.com) for providing the GPU pricing API
+- [Next.js](https://nextjs.org/) for the incredible React framework
+- [Tailwind CSS](https://tailwindcss.com/) for the utility-first CSS framework
